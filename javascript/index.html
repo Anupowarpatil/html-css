@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passphrase Validator</title>
+    <script src="passphrase.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Passphrase Validator</h1>
+    <input type="text" id="passphraseInput" placeholder="Enter your passphrase here">
+    <button onclick="validatePassphrase()">Validate</button>
+    <p id="result"></p>
+
+    <script>
+        function validatePassphrase() {
+            const input = document.getElementById('passphraseInput').value;
+            const result = isValidPassphrase(input);
+            const resultDisplay = document.getElementById('result');
+
+            if (result) {
+                resultDisplay.textContent = 'Valid Passphrase!';
+                resultDisplay.style.color = 'green';
+            } else {
+                resultDisplay.textContent = 'Invalid Passphrase!';
+                resultDisplay.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
