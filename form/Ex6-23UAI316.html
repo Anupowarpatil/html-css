@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Voter Card Form</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js"></script>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Voter Card Form</h2>
+        <form action="validateform()" onsubmit="return validateForm()">
+            <label>Name:</label><br>
+            <input type="text" id="name" placeholder="Enter your name"><br><br>
+            <label>Age:</label><br>
+            <input type="text" id="age" placeholder="Enter your age"><br><br>
+            <label>Date of Birth:</label><br>
+            <input type="date"><br><br>
+            <label>Email:</label><br>
+            <input type="text" id="email" placeholder="Enter your Email"><br><br>
+            <label>Adhar Card Number:</label><br>
+            <input type="text" id="adhar" placeholder="Enter Your Adhar Number"><br><br>
+            <label>Address:</label><br>
+            <input type="text" placeholder="Enter your Address"><br><br>
+            <button type="submit" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
